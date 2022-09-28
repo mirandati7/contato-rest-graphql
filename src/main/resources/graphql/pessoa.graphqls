@@ -1,0 +1,19 @@
+type PessoaDTO {   
+    id:ID!,     
+    nome: String!,
+    telefone: String!
+    email: String!
+    idade: Int!
+}
+
+input PessoaInput {
+    id:ID,
+    nome: String!
+    telefone: String!
+    email: String!
+}
+
+extend type Query {
+    pessoas:[PessoaDTO]
+    pessoasRest:[PessoaDTO]
+}
